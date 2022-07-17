@@ -1,0 +1,98 @@
+#include<ctime>
+#include<iomanip>
+#include<iostream>
+#include<cstdlib>
+using namespace std;
+
+int main()
+{
+	int rNum1, rNum2, rNum3, rNum4;
+	int userTotal, computerTotal;
+
+	int Gru = time(0);
+	srand(Gru);
+
+	cout << "viber case 1 oder case 2 ,case 3 oder case 4 - " << endl;
+	cin >> Gru;
+
+	rNum1 = 1 + rand() % 100;
+	rNum2 = 1 + rand() % 100;
+	rNum3 = 1+rand() % 50;
+	rNum4 = 1+rand() % 10;
+
+	switch (Gru)
+	{
+	case 1:
+		computerTotal = rNum1 + rNum2;
+
+		cout << setw(5) << rNum2 << endl;
+		cout << setw(3) << "+" << rNum1 << endl;
+		cout << "____\n";
+		cin >> userTotal;
+
+		if (userTotal == computerTotal)
+		{
+			cout << "Good job";
+		}
+		else
+		{
+			cout << "try agin - " << computerTotal;
+		}
+		break;
+
+	case 2:
+		computerTotal = rNum1 - rNum2;
+
+		cout << setw(5) << rNum2 << endl;
+		cout << setw(3) << "-" << rNum1 << endl;
+		cout << "____\n";
+		cin >> userTotal;
+
+		if (userTotal == computerTotal)
+		{
+			cout << "Good job";
+		}
+		else
+		{
+			cout << "try agin - " << computerTotal;
+		}
+		break;
+
+	case 3:
+		computerTotal = rNum3 * rNum4;
+
+		cout << setw(5) << rNum4 << endl;
+		cout << setw(3) << "*" << rNum3 << endl;
+		cout << "____\n";
+		cin >> userTotal;
+
+		if (userTotal == computerTotal)
+		{
+			cout << "Good job";
+		}
+		else
+		{
+			cout << "try agin - " << computerTotal;
+		}
+		break;
+
+	case 4:
+		double computerTotal = rNum3 / rNum4;
+
+		cout << setw(5) << rNum4 << endl;
+		cout << setw(3) << "/" << rNum3 << endl;
+		cout << "____\n";
+		cin >> userTotal;
+
+		if (userTotal == computerTotal)
+		{
+			cout << "Good job";
+		}
+		else
+		{
+			cout << "try agin - " << computerTotal;
+		}
+		break;
+	}
+	
+}
